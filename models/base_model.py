@@ -4,6 +4,7 @@ from uuid import uuid4
 from datetime import datetime
 from models import storage
 
+
 class BaseModel:
     """ This is a BaseModel Instance """
 
@@ -17,7 +18,8 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key in ('created_at', 'updated_at'):
-                        setattr(self, key, datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f'))
+                        setattr(self, key, datetime.strptime
+                                (value, '%Y-%m-%dT%H:%M:%S.%f'))
                     else:
                         setattr(self, key, value)
         else:
@@ -26,7 +28,7 @@ class BaseModel:
     def __str__(self):
         """ Represent string function Instance """
         return "[{}] ({}) {}". format(self.__class__.__name__,
-                                     self.id, self.__dict__)
+                                      self.id, self.__dict__)
 
     def save(self):
         """ To update the public instance attribute with current date time"""
@@ -41,4 +43,3 @@ class BaseModel:
         data['created_at'] = self.created_at.isoformat()
         data['updated_at'] = self.updated_at.isoformat()
         return data
-
