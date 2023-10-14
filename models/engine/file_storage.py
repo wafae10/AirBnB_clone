@@ -3,10 +3,11 @@
 import json
 import os
 
+
 class FileStorage:
     """ This is the FileStorage class """
-    
-    #Private class attribute to store string-path to the JSON file
+
+    # Private class attribute to store string-path to the JSON file
     __file_path = "file.json"
 
     # Private class attribute to store all objects by <class name>.id
@@ -17,8 +18,7 @@ class FileStorage:
         temp = {'BaseModel': BaseModel, }
         return temp
 
-
-    #Public Instance
+    # Public Instance
 
     def all(self):
         """ Returns the dictionary __objects """
