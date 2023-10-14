@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+""" This module is for the BaseModel """
+
 from uuid import uuid4
 from datetime import datetime
 from models import storage
@@ -9,7 +11,7 @@ class BaseModel:
     """ This is a BaseModel Instance """
 
     def __init__(self, *args, **kwargs):
-        """ This is to initializing the BaseModel constructor """
+        """ This function initialize BaseModel """
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = self.created_at
@@ -31,13 +33,15 @@ class BaseModel:
                                       self.id, self.__dict__)
 
     def save(self):
-        """ To update the public instance attribute with current date time"""
+        """ To update the public instance
+            attribute with current date time """
         self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
-        """ To return a dictionary containing all keys/values of __dict__
-            of the instance """
+        """ To return a dictionary containing all keys/values
+            of __dict__ of the instance """
+
         data = self.__dict__.copy()
         data['__class__'] = self.__class__.__name__
         data['created_at'] = self.created_at.isoformat()

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module define a class to manage file storage """
 
 import json
 import os
@@ -7,18 +8,14 @@ import os
 class FileStorage:
     """ This is the FileStorage class """
 
-    # Private class attribute to store string-path to the JSON file
     __file_path = "file.json"
-
-    # Private class attribute to store all objects by <class name>.id
     __objects = {}
 
     def classes(self):
+        """ This function manage the file storage of all files """
         from models.base_model import BaseModel
         temp = {'BaseModel': BaseModel, }
         return temp
-
-    # Public Instance
 
     def all(self):
         """ Returns the dictionary __objects """
@@ -39,7 +36,6 @@ class FileStorage:
 
     def reload(self):
         """ This deserializes the JSON file to __objects """
-
         load_file = FileStorage.__file_path
         if os.path.exists(load_file):
             with open(FileStorage.__file_path, 'r') as f:
