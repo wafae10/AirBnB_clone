@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" 
+"""
 This module is for the BaseModel class for all other models in the application
 
 Attributes:

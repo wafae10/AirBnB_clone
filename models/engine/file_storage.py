@@ -1,24 +1,34 @@
 #!/usr/bin/python3
-""" This module define a class to manage file storage """
+"""
+This module define a class to manage file storage
+The modue serializes objects to a JSON file and
+deserialize JSON files to instances
+
+Attributes:
+    __file_path (str): A path that save objects
+    __objects (dict): A dictionary of the objects instance.
+"""
 
 import json
 import os
 
 
 class FileStorage:
-    """ This is the FileStorage class """
+    """
+    This is the FileStorage class that
+    serialize and deserializes a file to an instance"""
 
     __file_path = "file.json"
     __objects = {}
 
     def classes(self):
-        """ This function manage the file storage of all files """
+        """ This function return the classes dictionary """
         from models.base_model import BaseModel
         temp = {'BaseModel': BaseModel, }
         return temp
 
     def all(self):
-        """ Returns the dictionary __objects """
+        """ Returns all the dictionary __objects """
         return FileStorage.__objects
 
     def new(self, obj):
