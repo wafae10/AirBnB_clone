@@ -114,19 +114,6 @@ class HBNBCommand(cmd.Cmd):
                         objects.append(str(value))
                 print(objects)
 
-    # def do_all(self, line):
-    #    """ Print all instances in string representation """
-    #    arr = line.split()
-    #    if len(arr) > 0 and arr[0] not in storage.class_dict():
-    #        print("** class doesn't exist **")
-    #    else:
-    #        new_list = []
-    #        for obj in storage.all().values():
-    #            if len(arr) > 0 and arr[0] == obj.__class__.__name__:
-    #                new_list.append(obj.__str__())
-    #            elif len(arr) == 0:
-    #                new_list.append(obj.__str__())
-    #        print(new_list)
 
     def do_update(self, line):
         """Update a class instance of a given id by adding or updating
