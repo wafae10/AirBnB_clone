@@ -1,6 +1,18 @@
 #!/usr/bin/python3
 
-""" This module is for the BaseModel """
+""" 
+This module is for the BaseModel class for all other models in the application
+
+Attributes:
+    id: A unique identifier for each instance.
+    created_at: This shows the time the instance is being created.
+    updated_at: This will show the instance modified datetime.
+
+    Methods:
+    to_dict(): dictionary representation of the model
+    save(): Saves the model to the database
+    __str__(): string representation of the module
+"""
 
 from uuid import uuid4
 from datetime import datetime
