@@ -56,11 +56,12 @@ button:hover {
    width: 100%;
    border: 1px solid #DDDDDD;
    border-radius: 4px;
+   display: none;
 
 }
 
 div:hover > .popover {
-    display: flex;
+    display: block;
 }
 .filters .popover h2 {
     font-size: 16px
