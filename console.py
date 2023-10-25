@@ -114,7 +114,6 @@ class HBNBCommand(cmd.Cmd):
                         objects.append(str(value))
                 print(objects)
 
-
     def do_update(self, line):
         """Update a class instance of a given id by adding or updating
         a given attribute key/value pair or dictionary.
@@ -157,6 +156,7 @@ class HBNBCommand(cmd.Cmd):
             if obj.__class__.__name__ == line:
                 count += 1
         print(count)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

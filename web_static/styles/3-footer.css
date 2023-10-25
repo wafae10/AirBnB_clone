@@ -1,4 +1,5 @@
 footer {
+<<<<<<< HEAD
     background-color: white;
     height: 60px;
     width: 100%;
@@ -16,3 +17,17 @@ footer {
     /* justify-content: center; */
     /* align-items: center; */
 }
+=======
+   background-color: white;
+    height: 60px;
+    width: 100%;
+    border-top: 1px #CCCCCC;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+footer.p{
+    margin: 0;
+}
+>>>>>>> 2d493c475dabb30453c6edfbfb85966c434306e7
